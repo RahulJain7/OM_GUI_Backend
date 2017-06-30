@@ -1,0 +1,6 @@
+#layout for flowhseet.mo for material stream
+class Flowsheet
+Material_Stream <name of material stream>(<variables in the base class Material_Stream.mo> = <corresponding variable values entered by user through the GUI> (applivable for variables whose values are specified by user)) # example Material_Stream matstm1(P=101325, T=234, ...)
+end Flowsheet
+
+Simulation of this model will result in the calculation of unknown variables that the user hasent specified in the material stream properties. You can collect the values of these calculated variables by refering to the instance variable. For example matstm1.P will return Pressure value. These calculated values have to be dumped to the GUI in the textboxes of properties. 
